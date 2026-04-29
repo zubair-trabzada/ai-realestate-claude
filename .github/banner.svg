@@ -1,69 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" fill="none">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="900" y2="320">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#16213e"/>
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#1a2840"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2d8a4e"/>
-      <stop offset="100%" stop-color="#e8a838"/>
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4a244"/>
+      <stop offset="100%" stop-color="#8b6914"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="900" height="320" rx="12" fill="url(#bg)"/>
 
-  <!-- Top accent line -->
-  <rect x="40" y="40" width="120" height="4" rx="2" fill="url(#accent)"/>
+  <!-- Left column: Title + info -->
+
+  <!-- Gold accent bar -->
+  <rect x="45" y="35" width="4" height="70" rx="2" fill="#d4a244"/>
 
   <!-- Main title -->
-  <text x="40" y="105" font-family="monospace, 'Courier New'" font-size="62" font-weight="bold" fill="#e8a838" letter-spacing="6">AI REAL ESTATE</text>
+  <text x="62" y="68" font-family="monospace, 'Courier New'" font-size="40" font-weight="bold" fill="#d4a244" letter-spacing="2">AI REAL ESTATE</text>
+  <text x="62" y="100" font-family="monospace, 'Courier New'" font-size="22" fill="#5b9a6a" letter-spacing="4">ANALYST</text>
 
-  <!-- Subtitle -->
-  <text x="40" y="140" font-family="monospace, 'Courier New'" font-size="20" fill="#2d8a4e" letter-spacing="2">ANALYST</text>
+  <!-- Divider -->
+  <rect x="62" y="115" width="200" height="2" rx="1" fill="url(#goldLine)" opacity="0.5"/>
 
   <!-- Tagline -->
-  <text x="40" y="172" font-family="monospace, 'Courier New'" font-size="15" fill="#6b7b8d">AI-Powered Property Research &amp; Investment Analysis for Claude Code</text>
+  <text x="62" y="140" font-family="monospace, 'Courier New'" font-size="12" fill="#7a8a9e">Property Research &amp; Investment Analysis</text>
+  <text x="62" y="158" font-family="monospace, 'Courier New'" font-size="12" fill="#7a8a9e">for Claude Code</text>
 
-  <!-- Stat badges row -->
-  <!-- Badge: 15 Skills -->
-  <rect x="40" y="195" width="105" height="28" rx="6" fill="#0d1117" stroke="#2d8a4e" stroke-width="1"/>
-  <text x="92" y="214" font-family="monospace, 'Courier New'" font-size="12" fill="#e8a838" text-anchor="middle" font-weight="bold">15 Skills</text>
+  <!-- Stats row -->
+  <g font-family="monospace, 'Courier New'" font-size="11" font-weight="bold">
+    <rect x="62" y="175" width="75" height="24" rx="4" fill="#1a2535" stroke="#d4a244" stroke-width="1"/>
+    <text x="99" y="191" fill="#d4a244" text-anchor="middle">15 Skills</text>
 
-  <!-- Badge: 5 Agents -->
-  <rect x="160" y="195" width="100" height="28" rx="6" fill="#0d1117" stroke="#2d8a4e" stroke-width="1"/>
-  <text x="210" y="214" font-family="monospace, 'Courier New'" font-size="12" fill="#e8a838" text-anchor="middle" font-weight="bold">5 Agents</text>
+    <rect x="147" y="175" width="75" height="24" rx="4" fill="#1a2535" stroke="#d4a244" stroke-width="1"/>
+    <text x="184" y="191" fill="#d4a244" text-anchor="middle">5 Agents</text>
 
-  <!-- Badge: Comps -->
-  <rect x="275" y="195" width="90" height="28" rx="6" fill="#0d1117" stroke="#2d8a4e" stroke-width="1"/>
-  <text x="320" y="214" font-family="monospace, 'Courier New'" font-size="12" fill="#e8a838" text-anchor="middle" font-weight="bold">Comps</text>
+    <rect x="232" y="175" width="95" height="24" rx="4" fill="#1a2535" stroke="#5b9a6a" stroke-width="1"/>
+    <text x="279" y="191" fill="#5b9a6a" text-anchor="middle">PDF Reports</text>
+  </g>
 
-  <!-- Badge: Cash Flow -->
-  <rect x="380" y="195" width="110" height="28" rx="6" fill="#0d1117" stroke="#2d8a4e" stroke-width="1"/>
-  <text x="435" y="214" font-family="monospace, 'Courier New'" font-size="12" fill="#e8a838" text-anchor="middle" font-weight="bold">Cash Flow</text>
+  <!-- Right column: Feature list -->
+  <g font-family="monospace, 'Courier New'" font-size="12">
+    <text x="470" y="55" fill="#d4a244">⬡</text><text x="490" y="55" fill="#c8d0dc">Comparable Sales Analysis</text>
+    <text x="470" y="80" fill="#d4a244">⬡</text><text x="490" y="80" fill="#c8d0dc">Rental Income &amp; Cash Flow</text>
+    <text x="470" y="105" fill="#d4a244">⬡</text><text x="490" y="105" fill="#c8d0dc">BRRRR &amp; Fix-and-Flip</text>
+    <text x="470" y="130" fill="#d4a244">⬡</text><text x="490" y="130" fill="#c8d0dc">Neighborhood &amp; Schools</text>
+    <text x="470" y="155" fill="#d4a244">⬡</text><text x="490" y="155" fill="#c8d0dc">Commercial &amp; Mortgage</text>
+    <text x="470" y="180" fill="#d4a244">⬡</text><text x="490" y="180" fill="#c8d0dc">Market Conditions &amp; Trends</text>
+  </g>
 
-  <!-- Badge: BRRRR -->
-  <rect x="505" y="195" width="100" height="28" rx="6" fill="#0d1117" stroke="#2d8a4e" stroke-width="1"/>
-  <text x="555" y="214" font-family="monospace, 'Courier New'" font-size="12" fill="#e8a838" text-anchor="middle" font-weight="bold">BRRRR</text>
+  <!-- Vertical divider between columns -->
+  <line x1="440" y1="40" x2="440" y2="200" stroke="#2a3650" stroke-width="1"/>
 
-  <!-- Badge: PDF Reports -->
-  <rect x="620" y="195" width="120" height="28" rx="6" fill="#0d1117" stroke="#2d8a4e" stroke-width="1"/>
-  <text x="680" y="214" font-family="monospace, 'Courier New'" font-size="12" fill="#e8a838" text-anchor="middle" font-weight="bold">PDF Reports</text>
+  <!-- Commands section (full width, bottom area) -->
+  <rect x="0" y="215" width="900" height="1" fill="#2a3650" opacity="0.6"/>
 
-  <!-- Command previews -->
-  <text x="40" y="258" font-family="monospace, 'Courier New'" font-size="13">
-    <tspan fill="#2d8a4e">/realestate analyze</tspan><tspan fill="#4A5568"> full 5-agent audit</tspan>
-  </text>
-  <text x="330" y="258" font-family="monospace, 'Courier New'" font-size="13">
-    <tspan fill="#2d8a4e">/realestate invest</tspan><tspan fill="#4A5568"> ROI analysis</tspan>
-  </text>
-  <text x="580" y="258" font-family="monospace, 'Courier New'" font-size="13">
-    <tspan fill="#2d8a4e">/realestate report-pdf</tspan><tspan fill="#4A5568"> PDF report</tspan>
-  </text>
+  <g font-family="monospace, 'Courier New'" font-size="12">
+    <text x="62" y="245">
+      <tspan fill="#5b9a6a">/realestate analyze</tspan><tspan fill="#4e5d73"> full property audit</tspan>
+    </text>
+    <text x="340" y="245">
+      <tspan fill="#5b9a6a">/realestate invest</tspan><tspan fill="#4e5d73"> ROI &amp; BRRRR</tspan>
+    </text>
+    <text x="590" y="245">
+      <tspan fill="#5b9a6a">/realestate rental</tspan><tspan fill="#4e5d73"> cash flow</tspan>
+    </text>
+    <text x="62" y="270">
+      <tspan fill="#5b9a6a">/realestate comps</tspan><tspan fill="#4e5d73"> market value</tspan>
+    </text>
+    <text x="340" y="270">
+      <tspan fill="#5b9a6a">/realestate listing</tspan><tspan fill="#4e5d73"> MLS description</tspan>
+    </text>
+    <text x="590" y="270">
+      <tspan fill="#5b9a6a">/realestate report-pdf</tspan><tspan fill="#4e5d73"> PDF</tspan>
+    </text>
+  </g>
 
   <!-- Bottom bar -->
-  <rect x="0" y="296" width="900" height="24" rx="0" fill="#0A0F1A"/>
-  <text x="40" y="313" font-family="monospace, 'Courier New'" font-size="12" fill="#4A5568">
-    comps + rental + BRRRR + flip + commercial + mortgage + neighborhood — property analysis in one command
+  <rect x="0" y="290" width="900" height="30" rx="0" fill="#080e18"/>
+  <text x="450" y="310" font-family="monospace, 'Courier New'" font-size="11" fill="#3d4d63" text-anchor="middle" letter-spacing="1">
+    residential  ·  commercial  ·  multi-family  ·  fix &amp; flip  ·  short-term rental  ·  land  ·  for Claude Code
   </text>
 </svg>
