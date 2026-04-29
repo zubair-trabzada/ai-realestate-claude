@@ -1,19 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a1628"/>
-      <stop offset="100%" style="stop-color:#0d1f3d"/>
+      <stop offset="0%" style="stop-color:#0f1a2e"/>
+      <stop offset="100%" style="stop-color:#1a2a45"/>
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#2d8a4e"/>
-      <stop offset="100%" style="stop-color:#1a2332"/>
+      <stop offset="0%" style="stop-color:#e8a838"/>
+      <stop offset="100%" style="stop-color:#c9982e"/>
     </linearGradient>
-    <linearGradient id="chartGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#2d8a4e;stop-opacity:0.08"/>
-      <stop offset="100%" style="stop-color:#c9982e;stop-opacity:0.15"/>
+    <linearGradient id="houseGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8a838;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#e8a838;stop-opacity:0.15"/>
     </linearGradient>
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -24,104 +31,110 @@
   <!-- Background -->
   <rect width="900" height="320" fill="url(#bg)" rx="8"/>
 
-  <!-- Subtle grid pattern -->
-  <g opacity="0.03" stroke="#ffffff" stroke-width="0.5">
-    <line x1="0" y1="40" x2="900" y2="40"/>
-    <line x1="0" y1="80" x2="900" y2="80"/>
-    <line x1="0" y1="120" x2="900" y2="120"/>
-    <line x1="0" y1="160" x2="900" y2="160"/>
-    <line x1="0" y1="200" x2="900" y2="200"/>
-    <line x1="0" y1="240" x2="900" y2="240"/>
-    <line x1="0" y1="280" x2="900" y2="280"/>
-    <line x1="100" y1="0" x2="100" y2="320"/>
-    <line x1="200" y1="0" x2="200" y2="320"/>
+  <!-- Subtle blueprint grid -->
+  <g opacity="0.04" stroke="#4a9eff" stroke-width="0.5">
+    <line x1="0" y1="64" x2="900" y2="64"/>
+    <line x1="0" y1="128" x2="900" y2="128"/>
+    <line x1="0" y1="192" x2="900" y2="192"/>
+    <line x1="0" y1="256" x2="900" y2="256"/>
+    <line x1="150" y1="0" x2="150" y2="320"/>
     <line x1="300" y1="0" x2="300" y2="320"/>
-    <line x1="400" y1="0" x2="400" y2="320"/>
-    <line x1="500" y1="0" x2="500" y2="320"/>
+    <line x1="450" y1="0" x2="450" y2="320"/>
     <line x1="600" y1="0" x2="600" y2="320"/>
-    <line x1="700" y1="0" x2="700" y2="320"/>
-    <line x1="800" y1="0" x2="800" y2="320"/>
+    <line x1="750" y1="0" x2="750" y2="320"/>
   </g>
 
-  <!-- Upward price chart silhouette (right side) -->
-  <g opacity="0.12" fill="none" stroke="#2d8a4e" stroke-width="2">
-    <polyline points="580,260 620,250 660,240 690,230 710,210 730,220 760,190 790,170 810,150 830,130 850,105 870,80"/>
-  </g>
-  <g opacity="0.05">
-    <polygon points="580,260 620,250 660,240 690,230 710,210 730,220 760,190 790,170 810,150 830,130 850,105 870,80 870,260" fill="url(#chartGrad)"/>
-  </g>
-
-  <!-- Building silhouettes (right side, subtle) -->
-  <g opacity="0.06" fill="#4a9eff">
-    <rect x="700" y="180" width="30" height="80" rx="1"/>
-    <rect x="735" y="160" width="25" height="100" rx="1"/>
-    <rect x="765" y="140" width="35" height="120" rx="1"/>
-    <rect x="805" y="170" width="28" height="90" rx="1"/>
-    <rect x="838" y="130" width="32" height="130" rx="1"/>
-    <!-- Windows -->
-    <rect x="706" y="190" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="718" y="190" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="706" y="210" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="718" y="210" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="706" y="230" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="718" y="230" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="775" y="150" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="787" y="150" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="775" y="170" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="787" y="170" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="775" y="190" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="787" y="190" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="846" y="140" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="858" y="140" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="846" y="160" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="858" y="160" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="846" y="180" width="6" height="6" fill="#0a1628" opacity="0.5"/>
-    <rect x="858" y="180" width="6" height="6" fill="#0a1628" opacity="0.5"/>
+  <!-- House icon (right side, prominent) -->
+  <!-- Main house body -->
+  <g opacity="0.25" filter="url(#softGlow)">
+    <!-- Roof -->
+    <polygon points="720,120 780,75 840,120" fill="none" stroke="#e8a838" stroke-width="2.5"/>
+    <!-- House body -->
+    <rect x="728" y="120" width="104" height="75" fill="none" stroke="#e8a838" stroke-width="2" rx="2"/>
+    <!-- Door -->
+    <rect x="765" y="155" width="30" height="40" fill="none" stroke="#e8a838" stroke-width="1.5" rx="2"/>
+    <!-- Door knob -->
+    <circle cx="790" cy="177" r="2" fill="#e8a838"/>
+    <!-- Left window -->
+    <rect x="738" y="132" width="20" height="18" fill="none" stroke="#e8a838" stroke-width="1.2" rx="1"/>
+    <line x1="748" y1="132" x2="748" y2="150" stroke="#e8a838" stroke-width="0.8"/>
+    <line x1="738" y1="141" x2="758" y2="141" stroke="#e8a838" stroke-width="0.8"/>
+    <!-- Right window -->
+    <rect x="802" y="132" width="20" height="18" fill="none" stroke="#e8a838" stroke-width="1.2" rx="1"/>
+    <line x1="812" y1="132" x2="812" y2="150" stroke="#e8a838" stroke-width="0.8"/>
+    <line x1="802" y1="141" x2="822" y2="141" stroke="#e8a838" stroke-width="0.8"/>
+    <!-- Chimney -->
+    <rect x="808" y="82" width="14" height="30" fill="none" stroke="#e8a838" stroke-width="1.5"/>
   </g>
 
-  <!-- Title: "AI REAL ESTATE" with green glow -->
-  <text x="40" y="70" font-family="'Courier New', monospace" font-size="42" font-weight="bold" fill="#2d8a4e" filter="url(#glow)" letter-spacing="3">AI REAL ESTATE</text>
+  <!-- Smaller houses (neighborhood feel) -->
+  <g opacity="0.12">
+    <!-- Small house left -->
+    <polygon points="650,160 675,140 700,160" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
+    <rect x="655" y="160" width="40" height="35" fill="none" stroke="#4a9eff" stroke-width="1.2" rx="1"/>
+    <rect x="669" y="173" width="12" height="22" fill="none" stroke="#4a9eff" stroke-width="1"/>
+
+    <!-- Small house right -->
+    <polygon points="850,145 870,130 890,145" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
+    <rect x="853" y="145" width="34" height="30" fill="none" stroke="#4a9eff" stroke-width="1.2" rx="1"/>
+    <rect x="864" y="155" width="12" height="20" fill="none" stroke="#4a9eff" stroke-width="1"/>
+  </g>
+
+  <!-- Location pin icon (near main house) -->
+  <g opacity="0.3" transform="translate(775, 50)">
+    <path d="M0,0 C0,-12 10,-20 10,-20 C10,-20 20,-12 20,0 C20,8 10,20 10,20 C10,20 0,8 0,0 Z" fill="none" stroke="#e8a838" stroke-width="1.5"/>
+    <circle cx="10" cy="-2" r="4" fill="none" stroke="#e8a838" stroke-width="1.2"/>
+  </g>
+
+  <!-- Dollar signs floating (subtle, representing value) -->
+  <g opacity="0.08" fill="#2d8a4e" font-family="'Courier New', monospace" font-size="18" font-weight="bold">
+    <text x="640" y="110">$</text>
+    <text x="860" y="95">$</text>
+    <text x="700" y="220">$</text>
+    <text x="850" y="210">$</text>
+  </g>
+
+  <!-- Title: "AI REAL ESTATE" with warm gold glow -->
+  <text x="40" y="72" font-family="'Courier New', monospace" font-size="44" font-weight="bold" fill="#e8a838" filter="url(#glow)" letter-spacing="3">AI REAL ESTATE</text>
 
   <!-- Subtitle: "ANALYST" in blue -->
-  <text x="40" y="110" font-family="'Courier New', monospace" font-size="32" font-weight="bold" fill="#4a9eff" letter-spacing="6">ANALYST</text>
+  <text x="42" y="112" font-family="'Courier New', monospace" font-size="30" font-weight="bold" fill="#4a9eff" letter-spacing="6">ANALYST</text>
 
-  <!-- Accent line -->
-  <rect x="40" y="125" width="300" height="3" fill="url(#accent)" rx="1"/>
+  <!-- Accent line (gold) -->
+  <rect x="40" y="125" width="280" height="3" fill="url(#accent)" rx="1"/>
 
   <!-- Tagline -->
-  <text x="40" y="155" font-family="'Courier New', monospace" font-size="13" fill="#8892b0" letter-spacing="0.5">AI-Powered Property Research &amp; Analysis Engine</text>
+  <text x="40" y="152" font-family="'Courier New', monospace" font-size="13" fill="#8892b0" letter-spacing="0.5">AI-Powered Property Research &amp; Investment Analysis</text>
 
   <!-- Stat badges row -->
   <g font-family="'Courier New', monospace" font-size="10" text-anchor="middle">
-    <!-- 15 Skills badge -->
-    <rect x="40" y="175" width="90" height="26" rx="4" fill="none" stroke="#2d8a4e" stroke-width="1.5" opacity="0.8"/>
-    <text x="85" y="192" fill="#2d8a4e">15 Skills</text>
+    <rect x="40" y="170" width="90" height="26" rx="4" fill="none" stroke="#e8a838" stroke-width="1.5" opacity="0.8"/>
+    <text x="85" y="187" fill="#e8a838">15 Skills</text>
 
-    <!-- 5 Agents badge -->
-    <rect x="140" y="175" width="85" height="26" rx="4" fill="none" stroke="#c9982e" stroke-width="1.5" opacity="0.8"/>
-    <text x="182" y="192" fill="#c9982e">5 Agents</text>
+    <rect x="140" y="170" width="85" height="26" rx="4" fill="none" stroke="#e8a838" stroke-width="1.5" opacity="0.8"/>
+    <text x="182" y="187" fill="#e8a838">5 Agents</text>
 
-    <!-- Investment Analysis badge -->
-    <rect x="235" y="175" width="130" height="26" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.8"/>
-    <text x="300" y="192" fill="#4a9eff">Investment Analysis</text>
+    <rect x="235" y="170" width="80" height="26" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.8"/>
+    <text x="275" y="187" fill="#4a9eff">Comps</text>
 
-    <!-- PDF Reports badge -->
-    <rect x="375" y="175" width="100" height="26" rx="4" fill="none" stroke="#2d8a4e" stroke-width="1.5" opacity="0.8"/>
-    <text x="425" y="192" fill="#2d8a4e">PDF Reports</text>
+    <rect x="325" y="170" width="100" height="26" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.8"/>
+    <text x="375" y="187" fill="#4a9eff">Cash Flow</text>
 
-    <!-- Property Screening badge -->
-    <rect x="485" y="175" width="130" height="26" rx="4" fill="none" stroke="#c9982e" stroke-width="1.5" opacity="0.8"/>
-    <text x="550" y="192" fill="#c9982e">Property Screening</text>
+    <rect x="435" y="170" width="110" height="26" rx="4" fill="none" stroke="#2d8a4e" stroke-width="1.5" opacity="0.8"/>
+    <text x="490" y="187" fill="#2d8a4e">BRRRR Analysis</text>
+
+    <rect x="555" y="170" width="100" height="26" rx="4" fill="none" stroke="#2d8a4e" stroke-width="1.5" opacity="0.8"/>
+    <text x="605" y="187" fill="#2d8a4e">PDF Reports</text>
   </g>
 
   <!-- Command previews -->
   <g font-family="'Courier New', monospace" font-size="13">
-    <text x="55" y="232"><tspan fill="#2d8a4e">/realestate analyze </tspan><tspan fill="#636e72">&lt;address&gt;</tspan></text>
-    <text x="55" y="254"><tspan fill="#2d8a4e">/realestate invest </tspan><tspan fill="#636e72">&lt;address&gt;</tspan></text>
-    <text x="55" y="276"><tspan fill="#2d8a4e">/realestate report-pdf</tspan></text>
+    <text x="55" y="228"><tspan fill="#e8a838">/realestate analyze </tspan><tspan fill="#636e72">&lt;address&gt;</tspan></text>
+    <text x="55" y="250"><tspan fill="#e8a838">/realestate invest </tspan><tspan fill="#636e72">&lt;address&gt;</tspan></text>
+    <text x="55" y="272"><tspan fill="#e8a838">/realestate rental </tspan><tspan fill="#636e72">&lt;address&gt;</tspan></text>
   </g>
 
   <!-- Bottom bar -->
-  <rect x="0" y="295" width="900" height="25" fill="#1a2332" opacity="0.6"/>
-  <text x="450" y="312" font-family="'Courier New', monospace" font-size="11" fill="#636e72" text-anchor="middle" letter-spacing="1">15 skills  ·  5 parallel agents  ·  Property Score 0-100  ·  PDF reports  ·  for Claude Code</text>
+  <rect x="0" y="295" width="900" height="25" fill="#0a1220" opacity="0.8"/>
+  <text x="450" y="312" font-family="'Courier New', monospace" font-size="11" fill="#636e72" text-anchor="middle" letter-spacing="1">comps  ·  rental income  ·  BRRRR  ·  fix &amp; flip  ·  commercial  ·  mortgage  ·  neighborhood  ·  PDF reports</text>
 </svg>
